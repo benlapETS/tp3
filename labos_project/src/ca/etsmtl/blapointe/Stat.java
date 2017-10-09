@@ -5,8 +5,6 @@
 
 package ca.etsmtl.blapointe;
 
-import org.apache.commons.math3.distribution.TDistribution;
-
 /**
  * Classe utilitaire de calcul statistiques.
  * 
@@ -58,4 +56,16 @@ public class Stat {
         / Math.sqrt(MathLib.sommeDistancesCarres(x, x, xM, xM)
             * MathLib.sommeDistancesCarres(y, y, yM, yM));
   }
+
+  /**
+   * Calculate the standard deviation for values.
+   * 
+   * @param values
+   *          - the input values
+   * @return the standard deviation
+   */
+  public static double ecartType(double[] values) {
+    return Math.sqrt(variance(values));
+  }
+
 }

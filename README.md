@@ -1,2 +1,2 @@
 # labo3
-Repository pour Bunco
+Repository pour Travis LOG330

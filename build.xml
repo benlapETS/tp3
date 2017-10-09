@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="labos_project" default="test" basedir=".">
+  <property name="src.dir" location="labos_project/src" />
+  <property name="lib.dir" location="lib" />
+  <property name="build.dir" location="bin" />
+  <property name="test.dir" location="labos_project/src" />
+  <property name="test.report.dir" location="testreport" />
+
+  <path id="junit.class.path">
+    <pathelement location="${lib.dir}/junit-4.11.jar" />
+    <pathelement location="${lib.dir}/hamcrest-core-1.3.jar" />
+    
+    <pathelement location="${build.dir}" />
+  </path>
+
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+    <delete dir="${test.report.dir}" />
+  </target>
+
+  <target name="makedir">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${test.report.dir}" />
+  </target>
+
+  <target name="compile" depends="clean, makedir">
+    <javac includeantruntime="true" srcdir="${src.dir}" destdir="${build.dir}">
+      <classpath refid="junit.class.path" />
+    </javac>
+  </target>
+
+  <target name="junit" depends="compile">
+    <junit printsummary="on" fork="true" haltonfailure="yes" >
+      <classpath refid="junit.class.path" />
+      <formatter type="xml" />
+      <batchtest todir="${test.report.dir}">
+        <fileset dir="${src.dir}">
+          <include name="**/*Tests.java" />
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+  <target name="test" depends="junit">
+    <description>Labos tests</description>
+  </target>
+</project> 
