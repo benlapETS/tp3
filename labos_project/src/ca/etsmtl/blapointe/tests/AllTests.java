@@ -8,7 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author benoit
  */
 @RunWith(Suite.class)
-@SuiteClasses({ CorrelationTests.class })
+@SuiteClasses({ CorrelationTests.class, VarianceTests.class })
 public class AllTests {
 
 }
