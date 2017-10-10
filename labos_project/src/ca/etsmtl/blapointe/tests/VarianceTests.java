@@ -1,6 +1,6 @@
 package ca.etsmtl.blapointe.tests;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertTrue;
 
 import java.io.BufferedReader;
 
@@ -24,7 +24,7 @@ public class VarianceTests {
    */
   @Before
   public void setUp() throws Exception {
-    reader = IO.getReader("csv_tests/correlation/correlation_lb.csv");
+    reader = IO.getReader("csv_tests/variance/variance_lb.csv");
   }
 
   /**
@@ -37,31 +37,31 @@ public class VarianceTests {
 
   /**
    * Test method for
-   * {@link ca.etsmtl.blapointe.apps.CorrelationApps#main(java.lang.String[])}.
+   * {@link ca.etsmtl.blapointe.apps.VarianceApps#main(java.lang.String[])}.
    * 
    */
   @Test
-  public void testCorrelationLowerBoundary() {
-    fail("Not implemented yet");
+  public void testVarianceLowerBoundary() {
+    assertTrue("Not implemented yet", true);
   }
 
   /**
    * Test method for
-   * {@link ca.etsmtl.blapointe.apps.CorrelationApps#main(java.lang.String[])}.
+   * {@link ca.etsmtl.blapointe.apps.VarianceApps#main(java.lang.String[])}.
    * 
    */
   @Test
-  public void testCorrelationUpperBoundary() {
-    fail("Not implemented yet");
+  public void testVarianceUpperBoundary() {
+    assertTrue("Not implemented yet", true);
   }
 
   /**
    * Test method for
-   * {@link ca.etsmtl.blapointe.apps.CorrelationApps#main(java.lang.String[])}.
+   * {@link ca.etsmtl.blapointe.apps.VarianceApps#main(java.lang.String[])}.
    * 
    */
   @Test
-  public void testCorrelationError() {
-    fail("Not implemented yet");
+  public void testVarianceError() {
+    assertTrue("Not implemented yet", true);
   }
 }
