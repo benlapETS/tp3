@@ -1,2 +1,2 @@
-# labo3
-Repository pour Travis LOG330
+# tp3
+Repository pour Travis LOG330 - TP3
